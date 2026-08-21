@@ -8,7 +8,7 @@ bin/
 node_modules/
 *.log
 
-# machine-local data (added 2026-08-18)
-ayu/          # pi-rewind checkpoints
-pi-fff/       # frecency/history LMDB data
+# machine-local data
+ayu/
+pi-fff/
 logs/
