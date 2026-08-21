@@ -13,4 +13,4 @@ ayu/
 pi-fff/
 logs/
 
-fff/          # pi-fff frecency/history LMDB data
+fff/
