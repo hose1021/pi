@@ -1,0 +1,14 @@
+# machine-local (not synced)
+auth.json
+models-store.json
+trust.json
+sessions/
+npm/
+bin/
+node_modules/
+*.log
+
+# machine-local data (added 2026-08-18)
+ayu/          # pi-rewind checkpoints
+pi-fff/       # frecency/history LMDB data
+logs/
