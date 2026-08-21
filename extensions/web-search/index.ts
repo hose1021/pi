@@ -91,10 +91,9 @@ export default function webSearch(pi: ExtensionAPI): void {
 			// Acquire concurrency semaphore before starting venv setup/search
 			await acquireSearchLock(signal);
 			try {
-				const cwd = _ctx.cwd;
-
-				// Resolve venv python (auto-creates venv + installs ddgs on first call)
-				const python = await ensureWebSearchVenv(pi.exec, cwd, onUpdate);
+				// Resolve venv python (auto-creates venv + installs ddgs on first call).
+				// Lives under ~/.pi — independent of the session/project cwd.
+				const python = await ensureWebSearchVenv(pi.exec, onUpdate);
 
 				const result = await runSearchScript(
 					python,
