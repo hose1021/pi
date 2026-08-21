@@ -52,7 +52,7 @@ memory.md              профиль пользователя
 extensions/            расширения (исходники, без node_modules)
 skills/                скиллы
 themes/                темы
-fff/                   pi-fff (источники, не данные)
+fff/                   (данные pi-fff, НЕ синхронизируются)
 git/                   установленные git-пакеты
 ```
 
@@ -60,7 +60,10 @@ git/                   установленные git-пакеты
 
 `.gitignore` исключает: `auth.json`, `models-store.json`, `trust.json`,
 `sessions/`, `npm/`, `bin/`, `node_modules/`, `*.log`, `ayu/` (чекпоинты
-pi-rewind), `pi-fff/` (LMDB-базы frecency/history), `logs/`.
+pi-rewind), `pi-fff/` (LMDB-базы frecency/history), `fff/` (те же базы),
+`logs/`, `pi-tidy-tools.pi-fff.json` (журнал жизненного цикла pi-fff —
+содержит машино-локальные абсолютные пути; на каждой машине пересоздаётся
+сам с локальным путём, поэтому не должен синхронизироваться).
 
 ⚠️ Не добавляйте секреты и личные данные в репозиторий — он может быть публичным.
 
