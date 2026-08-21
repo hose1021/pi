@@ -4,7 +4,7 @@
   "operation": "setup",
   "phase": "committed",
   "scope": "user",
-  "settingsPath": "/Users/hose/.pi/agent/settings.json",
+  "settingsPath": "~/.pi/agent/settings.json",
   "counterpartPaths": [],
   "priorEntry": "npm:@ff-labs/pi-fff",
   "managedEntry": {
@@ -16,7 +16,7 @@
       "scope": "user",
       "packageIdentity": "@ff-labs/pi-fff",
       "profile": "scoped",
-      "settingsPath": "/Users/hose/.pi/agent/settings.json",
+      "settingsPath": "~/.pi/agent/settings.json",
       "entryIndex": 6,
       "priorEntry": "npm:@ff-labs/pi-fff",
       "managedEntry": {
