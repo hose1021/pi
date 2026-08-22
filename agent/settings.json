@@ -8,7 +8,7 @@
     "openai-codex/gpt-5.6-sol:medium",
     "opencode-go/deepseek-v4-flash:medium"
   ],
-  "quietStartup": true,
+  "quietStartup": false,
   "defaultProjectTrust": "ask",
   "enableInstallTelemetry": false,
   "packages": [
@@ -17,7 +17,9 @@
     "npm:context-mode",
     "npm:@zhcsyncer/pi-glance",
     "git:github.com/nagisanzenin/engram",
-    "npm:speak-like-you-eat"
+    "npm:speak-like-you-eat",
+    "npm:@tintinweb/pi-subagents",
+    "npm:bigpowers"
   ],
   "extensions": [
     "@agimon-ai/doompi",
