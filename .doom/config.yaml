@@ -3,10 +3,10 @@ modes:
   planning:
     main:
       model: opencode-go/deepseek-v4-flash
-      thinking: high
+      thinking: medium
     subagents:
       model: opencode-go/deepseek-v4-flash
-      thinking: high
+      thinking: medium
 
 # Autonomous voice is opt-in and uses an explicitly configured Pi model.
 # voice:

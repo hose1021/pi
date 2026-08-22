@@ -4,9 +4,12 @@ models-store.json
 trust.json
 sessions/
 npm/
+agent/git/
 bin/
 node_modules/
 *.log
+settings.json.bak.*
+context-mode/
 
 # machine-local data
 ayu/
@@ -22,3 +25,4 @@ pi-tidy-tools.pi-fff.json
 agent/doom-runner/
 agent/@agimon-ai/
 agent/pi-cache-optimizer-stats.json
+agent/pi-plan-mode.json

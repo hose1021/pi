@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "model": {
+    "provider": "opencode-go",
+    "id": "deepseek-v4-flash"
+  }
+}

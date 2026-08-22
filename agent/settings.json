@@ -1,13 +1,27 @@
 {
   "lastChangelogVersion": "0.84.2",
   "theme": "doom-pi-dark",
-  "defaultProvider": "opencode-go",
-  "defaultModel": "deepseek-v4-flash",
-  "defaultThinkingLevel": "high",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-sol",
+  "defaultThinkingLevel": "medium",
+  "enabledModels": [
+    "openai-codex/gpt-5.6-sol:medium",
+    "opencode-go/deepseek-v4-flash:medium"
+  ],
   "quietStartup": true,
+  "defaultProjectTrust": "ask",
+  "enableInstallTelemetry": false,
+  "packages": [
+    "git:github.com/DietrichGebert/ponytail",
+    "npm:pi-subagents",
+    "npm:context-mode",
+    "npm:@zhcsyncer/pi-glance",
+    "git:github.com/nagisanzenin/engram",
+    "npm:speak-like-you-eat"
+  ],
   "extensions": [
     "@agimon-ai/doompi",
-    "!extensions/**"
+    "extensions/rtk.ts"
   ],
   "themes": [
     "themes/doom-pi-dark.json"
