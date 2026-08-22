@@ -16,3 +16,9 @@ logs/
 fff/
 
 pi-tidy-tools.pi-fff.json
+
+# doompi runtime data (machine-local)
+.doom/sync/
+agent/doom-runner/
+agent/@agimon-ai/
+agent/pi-cache-optimizer-stats.json

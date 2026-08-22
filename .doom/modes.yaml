@@ -1,0 +1,74 @@
+# A layer is a reusable named bundle of packages, built-in or local extensions,
+# and hook groups. Major modes below choose which layers load together for a session.
+#
+# Layers and modes defined here apply to every repository. A repository's own
+# .doom/modes.yaml is read after this file and replaces any layer or mode of the
+# same name, so a repository can override one entry without restating the rest.
+#
+# Add a layer by giving it a unique name under layers. Local Pi scripts belong
+# under extensions, while installed Pi packages belong under packages:
+#   review-tools:
+#     extensions:
+#       - './extensions/local-review.ts'
+#     packages:
+#       - '@scope/review-extension'
+# A bare extension name selects a DoomPi built-in. A path beginning with ./ or
+# ../ loads a custom script or extension directory. A bare package loads its
+# ordered package.json pi.extensions entries, while an exported subpath selects
+# one adapter. Relative paths resolve beside this file here (~/.pi/.doom), or
+# from the repository root in .doom/modes.yaml.
+#
+# Use a package mapping when that package accepts configuration. Configuration
+# belongs under the package entry that consumes it, not beside packages.
+# The top-level default bundle loads before every major mode. Replace this whole
+# packages list to customize the distribution defaults. DoomPi core packages
+# remain active independently of this list.
+default:
+  packages:
+    - '@agimon-ai/doompi-help'
+    - '@agimon-ai/doompi-hook'
+    - '@agimon-ai/doompi-goal'
+    - '@agimon-ai/doompi-voice'
+    - '@agimon-ai/doompi-runner'
+    - '@agimon-ai/doompi-read'
+    - '@agimon-ai/doompi-grep'
+    - '@agimon-ai/doompi-edit'
+    - '@agimon-ai/doompi-file-edit'
+    - '@agimon-ai/doompi-autocompact'
+    - '@agimon-ai/doompi-loop'
+    - '@agimon-ai/doompi-plan'
+    - '@agimon-ai/doompi-workflow'
+    - '@agimon-ai/doompi-log'
+    - '@agimon-ai/doompi-mcp'
+layers:
+  team:
+    packages:
+      - name: '@agimon-ai/doompi-team'
+        # Optional Team configuration. Uncomment and choose models available to Pi.
+        # config:
+        #   models:
+        #     - model: openai-codex/gpt-5.6-luna
+        #       thinking: xhigh
+        #   # Tool names excluded from subagents launched by this package. These
+        #   # remove model-visible tools while preserving hidden team transport.
+        #   excludeTools: [ask_user_question, intercom, subagent]
+  ask-user:
+    packages:
+      - '@agimon-ai/doompi-user-feedback'
+  task:
+    packages:
+      - '@agimon-ai/doompi-task'
+# A major mode explains when it should be used and names its ordered layers.
+# Add another entry under majorMode, then select it with
+# doompi --major-mode <name>. Change defaultMajorMode to make it the default.
+defaultMajorMode: copilot
+majorMode:
+  minimal:
+    description: Lean mode with Team delegation and persistent tasks.
+    layers: [team, task]
+  copilot:
+    description: General-purpose coding mode with Team delegation, persistent tasks, supervised commands, and structured user feedback.
+    layers: [team, ask-user, task]
+  # review:
+  #   description: Focused review mode for inspecting changes and reporting risks.
+  #   layers: [team, task, ask-user]

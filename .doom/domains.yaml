@@ -1,0 +1,47 @@
+# Plugins are named once in this catalog, then selected by one or more domains.
+# DoomPi automatically inspects personal and repository Codex marketplaces.
+# Each configured root may also be a folder whose direct children are plugins;
+# use roots: [plugins] to discover a repository plugin folder without one entry
+# per plugin. Discovery never scans recursively.
+defaultDomains: [default]
+plugins:
+  roots: []
+  entries: {}
+  # Local paths resolve beside this file in ~/.pi/.doom. Repository paths in a
+  # repository .doom/domains.yaml resolve from that repository root.
+  # entries:
+  #   development:
+  #     source: local
+  #     path: plugins/development
+  #   remote-review:
+  #     source: url
+  #     url: https://github.com/acme/review-plugin.git
+  #     ref: v1.2.0
+  #   published-review:
+  #     source: npm
+  #     package: '@acme/review-plugin'
+  #     version: 1.2.0
+# Domains carry descriptions and refer to catalog names, not filesystem paths.
+domains:
+  default:
+    description: Shared skills and repository MCP only.
+    plugins: []
+  # development:
+  #   description: TypeScript implementation and review tools.
+  #   plugins:
+  #     - development
+  #     # Mapping form can load only selected resources from a shared plugin.
+  #     - name: remote-review
+  #       skills: [typescript]
+  #       agents: [reviewer]
+  #       hooks: false
+  #       mcp: true
+  #   # Set false only when this domain should omit shared .claude/skills.
+  #   sharedSkills: false
+# Select it with doompi --domains development, or add it to defaultDomains.
+#
+# Aliases let one selection enable multiple domains. Replace the empty mapping
+# below with entries like the commented example.
+aliases: {}
+# aliases:
+#   work: [default, development]

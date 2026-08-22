@@ -1,0 +1,20 @@
+# Profiles select a persona and optional environment defaults for a session.
+# Each configured root may itself be a profile or contain direct-child profile
+# folders. A folder is discovered when it contains profile.md, SOUL.md, or
+# AGENTS.md; discovery never scans recursively.
+profiles:
+  roots: []
+  entries: {}
+  # Roots resolve beside this file in ~/.pi/.doom. Repository roots in a
+  # repository .doom/profiles.yaml resolve from that repository root.
+  # roots: [agents/acme]
+  # Explicit entries override an automatically discovered folder of the same
+  # name. Environment values must be strings; already exported values win.
+  # entries:
+  #   writer:
+  #     persona: agents/special/writer
+  #     env:
+  #       BRAND: acme
+  #       TONE: concise
+# Doom Pi concatenates profile.md, SOUL.md, then AGENTS.md for the persona.
+# Select one with: doompi --profile writer

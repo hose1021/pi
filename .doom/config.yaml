@@ -1,0 +1,23 @@
+projectTrust: ask
+modes:
+  planning:
+    main:
+      model: opencode-go/deepseek-v4-flash
+      thinking: high
+    subagents:
+      model: opencode-go/deepseek-v4-flash
+      thinking: high
+
+# Autonomous voice is opt-in and uses an explicitly configured Pi model.
+# voice:
+#   autoCapture:
+#     model: provider/model-id
+#     startPhrases:
+#       - hey doom
+#     stopPhrases:
+#       - stop speaking
+#     utteranceIdleMs: 3000
+#     tts:
+#       engine: macos-say
+#       voice: Samantha
+#       rate: 190

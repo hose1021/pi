@@ -1,0 +1,15 @@
+{
+  "lastChangelogVersion": "0.84.2",
+  "theme": "doom-pi-dark",
+  "defaultProvider": "opencode-go",
+  "defaultModel": "deepseek-v4-flash",
+  "defaultThinkingLevel": "high",
+  "quietStartup": true,
+  "extensions": [
+    "@agimon-ai/doompi",
+    "!extensions/**"
+  ],
+  "themes": [
+    "themes/doom-pi-dark.json"
+  ]
+}
